@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conócenos - Mi Sitio Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #9370DB;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: #9370DB;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-bottom: 1rem; /* Agregamos margen inferior para separar del texto */
+        }
+
+        button:hover {
+            background-color: #663399;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #9370DB;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Estilos para las imágenes con movimiento */
+        .animated-image-container {
+            position: relative;
+            width: 45%; /* Cambiamos el ancho para que estén una al lado de la otra */
+            max-width: 300px; /* Limitamos el ancho máximo de las imágenes */
+            height: auto;
+            overflow: hidden;
+            margin-right: 2%; /* Agregamos margen derecho para separar las imágenes */
+            margin-bottom: 1rem; /* Agregamos margen inferior para separar del texto */
+            float: left; /* Hacemos que las imágenes floten a la izquierda */
+        }
+
+        .animated-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .animated-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para el texto */
+        p {
+            font-size: 1.5rem; /* Tamaño de fuente más grande */
+            line-height: 1.9; /* Altura de línea */
+            font-family: Arial, sans-serif; /* Cambiar el tipo de letra */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conócenos</h1>
+    </header>
+
+    <main>
+        <section id="about-us">
+            <h2>Nuestra Historia</h2>
+            <button id="toggle-details">Mostrar detalles</button>
+            <div id="details" class="hidden">
+                <p>
+                    <strong>Bueno, mi amor por la moda y la idea detrás de todo esto realmente surgen de experiencias muy personales y de un profundo interés que he tenido desde hace mucho tiempo.</strong> Siempre he sido muy cercana al mundo del arte y la creatividad, y la moda me proporciona una plataforma increíble para expresarme de una manera única y auténtica.
+                    <br><br>
+                    Recuerdo que desde pequeña, me sentía fascinada por la forma en que la ropa podía transmitir emociones, personalidades e incluso contar historias. Creo que gran parte de este amor por la moda se debe a la influencia de mi familia y amigos, quienes siempre han valorado la originalidad y la expresión personal.
+                    <br><br>
+                    Además, he tenido la suerte de viajar a diferentes lugares y sumergirme en diversas culturas, lo que ha ampliado mi perspectiva sobre la moda y me ha inspirado a explorar nuevos estilos y tendencias. Cada prenda que elijo y cada conjunto que creo es una expresión de quién soy y de cómo me siento en ese momento.
+                    <br><br>
+                    En resumen, mi pasión por la moda no solo es una parte importante de mi identidad, sino que también es un reflejo de mis experiencias, mis influencias y mi deseo de expresarme de manera auténtica. Es un viaje continuo de autoexploración y creatividad que estoy emocionada de seguir adelante.
+                </p>
+                <!-- Aquí colocaremos las imágenes con movimiento -->
+                <div class="animated-image-container">
+                    <img src="https://i.pinimg.com/736x/d4/28/d9/d428d9fdd750660c64a82a8febb10075.jpg" class="animated-image">
+                </div>
+                <div class="animated-image-container">
+                    <img src="https://i.pinimg.com/564x/c4/47/cf/c447cf74c5043f8ae596d322cf0c2ca1.jpg" class="animated-image">
+                </div>
+                <!-- Puedes agregar más imágenes si lo deseas -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web.</p>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-details').addEventListener('click', function() {
+            document.getElementById('details').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
